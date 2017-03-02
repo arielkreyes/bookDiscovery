@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://use.fontawesome.com/1e478acf43.js);
+@font-face {
+  font-family: midnightOwl;
+  src: url(../fonts/midnightOwlR/MidnightOwl.eot), url(../fonts/midnightOwlR/MidnightOwl.svg), url(../fonts/midnightOwlR/MidnightOwl.woff), url(../fonts/midnightOwlR/MidnightOwl.ttf); }
+.component {
+  box-sizing: content-box; }
+
+.global:after, main:after, .leftCol:after, footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+html {
+  background: url(../images/headerBG.gif) repeat-x, url(../images/footerBG.gif) repeat-x, url(../images/11.jpg) no-repeat;
+  background-position: top, bottom, center;
+  background-size: auto;
+  background-attachment: scroll, scroll, fixed; }
+
+body {
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto; }
+  body p {
+    font-size: 1.5vw; }
+
+header {
+  color: #c1beb9;
+  height: 110px;
+  width: 100%; }
+
+h1 {
+  text-indent: -99em;
+  background: url(../images/whiteLogosm.png) no-repeat;
+  background-size: auto;
+  width: 112px;
+  height: 77px;
+  float: left;
+  margin: 1em 0; }
+
+nav {
+  text-align: center; }
+  nav ul {
+    list-style: none; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    text-decoration: none;
+    color: #c1beb9; }
+
+.utility {
+  width: 30%;
+  float: right;
+  margin: 1% 0 0 0; }
+  .utility li {
+    font-size: .75em;
+    padding-right: 3%; }
+  .utility li:last-of-type {
+    padding-right: 0;
+    margin-right: 0; }
+
+.global {
+  padding-top: 9%; }
+  .global li {
+    padding-right: 10%; }
+  .global li:last-of-type {
+    padding-right: 0; }
+
+.social {
+  margin: 1%; }
+
+.legal {
+  color: #c1beb9;
+  font-size: .75em; }
+
+.featured {
+  background: url(../images/aboutFeatured.png) no-repeat;
+  background-position: right;
+  background-size: contain;
+  overflow: hidden;
+  height: 350px;
+  position: relative; }
+
+h2 {
+  font-family: midnightOwl, serif;
+  font-size: 2em;
+  color: #1c1919; }
+
+.featured p {
+  font-family: midnightOwl, serif;
+  color: #242020; }
+
+.leftCol {
+  max-width: 50%;
+  float: left; }
+
+form h3 {
+  font-size: 1.5em; }
+
+label {
+  padding-top: 1em; }
+
+input, label {
+  width: 100%;
+  display: block;
+  margin: .2em 0;
+  color: #242020; }
+
+input {
+  padding: 2%;
+  border: none;
+  background-color: #c1beb9; }
+
+input[type="submit"] {
+  background-color: #271514;
+  color: #c1beb9;
+  width: 30%;
+  padding: 2%; }
+
+footer {
+  height: 150px; }
+  footer small {
+    display: block;
+    margin: 1%;
+    text-align: center;
+    color: #c1beb9;
+    font-size: .75em; }
+
+/*# sourceMappingURL=styles.css.map */

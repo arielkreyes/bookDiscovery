@@ -1,0 +1,181 @@
+//imports
+// @import 'reset';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://use.fontawesome.com/1e478acf43.js);
+//colors
+$maroon : rgb(39, 21, 20);
+$offwhite : rgb(193, 190, 185);
+$dkgrey : rgb(28, 25, 25);
+$grey : rgb(36, 32, 32);
+
+//fonts
+//midnight Owl Regular
+@font-face {
+  font-family: midnightOwl;
+  src: url(../fonts/midnightOwlR/MidnightOwl.eot),url(../fonts/midnightOwlR/MidnightOwl.svg),url(../fonts/midnightOwlR/MidnightOwl.woff),url(../fonts/midnightOwlR/MidnightOwl.ttf);
+}
+//open sans - google font :)
+//font-family: 'Open Sans', sans-serif;
+//nav Padding
+
+
+
+//USEFULL SHINDIGS
+//box-sizing:borderbox
+.component {
+  box-sizing: content-box;
+}
+//clear fixins'
+//http://blog.teamtreehouse.com/a-better-clearfix-with-sass
+//using a placeholder selector
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+//Use this in class required:) - @extend %clearfix;
+//DEFAULT STYLES******************************************
+html {
+  background: url(../images/headerBG.gif)repeat-x,
+              url(../images/footerBG.gif)repeat-x,
+              url(../images/11.jpg)no-repeat;
+  background-position:  top, bottom, center,;
+  background-size: auto;
+  background-attachment: scroll, scroll, fixed;
+}
+body {
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  p {
+    font-size: 1.5vw;
+  }
+}
+//HEADER STYLES & NAVIGATION *****************************************
+header {
+  color: $offwhite;
+  height: 110px;
+  width: 100%;
+}
+h1 {
+  text-indent: -99em;
+  background: url(../images/whiteLogosm.png)no-repeat;
+  background-size: auto;
+  width: 112px;
+  height: 77px;
+  float: left;
+  margin: 1em 0;
+}
+nav {
+  text-align:center;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    color: $offwhite;
+  }
+}
+.utility {
+  width: 30%;
+  float: right;
+  margin: 1% 0 0 0;
+  li {
+    font-size: .75em;
+    padding-right: 3%;
+  }
+  li:last-of-type {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+.global {
+  @extend %clearfix;
+  padding-top: 9%;
+  li {
+   padding-right: 10%;
+  }
+  li:last-of-type {
+    padding-right: 0;
+  }
+}
+.social {
+  margin: 1%;
+}
+.legal {
+  color: $offwhite;
+  font-size: .75em;
+}
+//FEATURED STYLES *****************************************************
+main {
+    @extend %clearfix;
+}
+.featured {
+  background: url(../images/aboutFeatured.png)no-repeat;
+  background-position: right;
+  background-size: contain;
+  overflow: hidden;
+  height: 350px;
+  position: relative;
+}
+h2 {
+  font-family: midnightOwl, serif;
+  font-size: 2em;
+  // line-height: 2.72em;
+  color: $dkgrey;
+}
+.featured p {
+  font-family: midnightOwl, serif;
+  color: $grey;
+}
+//COLUMNS!!!*******************************************
+//2COLS --
+.leftCol {
+  max-width: 50%;
+  float: left;
+  @extend %clearfix;
+}
+//FORM STYLES******************************************
+form h3 {
+  font-size: 1.5em;
+  // padding: 1em 0;
+}
+label {
+padding-top: 1em;
+}
+input, label {
+  width: 100%;
+  display: block;
+  margin: .2em 0;
+  color: $grey;
+}
+input {
+  padding: 2%;
+  border: none;
+  background-color: $offwhite;
+}
+input[type="submit"] {
+  background-color: $maroon;
+  color: $offwhite;
+  width: 30%;
+  padding: 2%;
+}
+
+//FOOTER STYLES *******************************************************
+footer {
+  @extend %clearfix;
+  height: 150px;
+  small {
+    display: block;
+    margin: 1%;
+    text-align: center;
+    color: $offwhite;
+    font-size: .75em;
+  }
+}
