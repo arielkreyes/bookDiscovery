@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://use.fontawesome.com/1e478acf43.js);
 @font-face {
   font-family: midnightOwl;
   src: url(../fonts/midnightOwlR/MidnightOwl.eot), url(../fonts/midnightOwlR/MidnightOwl.svg), url(../fonts/midnightOwlR/MidnightOwl.woff), url(../fonts/midnightOwlR/MidnightOwl.ttf); }
@@ -12,10 +11,10 @@
   clear: both; }
 
 html {
-  background: url(../images/headerBG.gif) repeat-x, url(../images/footerBG.gif) repeat-x, url(../images/11.jpg) no-repeat;
-  background-position: top, bottom, center;
+  background: url(../images/headerBG.gif) repeat-x, url(../images/11.jpg) no-repeat;
+  background-position: top, center;
   background-size: auto;
-  background-attachment: scroll, scroll, fixed; }
+  background-attachment: scroll, fixed; }
 
 body {
   width: 70%;
@@ -115,15 +114,16 @@ input[type="submit"] {
   background-color: #271514;
   color: #c1beb9;
   width: 30%;
-  padding: 2%; }
+  padding: 3%;
+  margin-top: 1em; }
 
 footer {
-  height: 150px; }
-  footer small {
-    display: block;
-    margin: 1%;
-    text-align: center;
-    color: #c1beb9;
-    font-size: .75em; }
+  color: #1c1919; }
+
+small {
+  display: block;
+  margin: 1%;
+  text-align: center;
+  font-size: .75em; }
 
 /*# sourceMappingURL=styles.css.map */

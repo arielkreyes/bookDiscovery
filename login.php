@@ -1,8 +1,9 @@
 <?php
+require('db_config.php');
 include('header.php');
 ?>
 
-<main id="register">
+<main>
   <section class="featured">
     <h2>welcome Back!</h2>
     <p>
@@ -11,27 +12,19 @@ include('header.php');
   </section>
   <div class="leftCol">
     <!-- User Create/Register for Account here! :D -->
-    <form method="post" action="" class="register">
-      <h3>Register Here</h3>
+    <!--TODO: turn action into $_SERVER :) -->
+    <form action="login.php" class="f-login wrap" method="post" >
+      <h3>Login to your account here! </h3>
+      <?php echo $feedback; ?>
+      <label for="login-username">Username</label>
+      <input id="login-username" type="text" name="username" value="" autofocus required />
 
-      <label for="fname">First Name</label>
-      <input type="text" name="fname" id="fname" />
-      <label for="lname">Last Name</label>
-      <input type="text" name="lname" id="lname" />
-      <label for="email">Email Address</label>
-      <input type="email" name="email" id="email" />
-      <label for="password">Create Password</label>
-      <input type="password" name="password" id="password" />
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" name="password" value="" required />
 
-      <label>
-        <input type="checkbox" name="policy" value="1" />
-        I agree to the <a href="#" target="_blank">terms of service and privacy policy</a>
-      </label>
-
-      <input type="submit" value="Register"/>
-      <input type="hidden" name="did_register" value="1" />
+      <input type="submit" name="submit" value="Log In"/>
+      <input type="hidden" name="did_login" value="true" />
     </form>
-    <a href="#">Already have an account? <i class="fa fa-sign-in" aria-hidden="true"></i> Log In.</a>
   </div>
 </main>
 <?php

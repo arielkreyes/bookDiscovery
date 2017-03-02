@@ -1,7 +1,7 @@
 //imports
+@charset "UTF-8";
 // @import 'reset';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://use.fontawesome.com/1e478acf43.js);
 //colors
 $maroon : rgb(39, 21, 20);
 $offwhite : rgb(193, 190, 185);
@@ -39,11 +39,10 @@ $grey : rgb(36, 32, 32);
 //DEFAULT STYLES******************************************
 html {
   background: url(../images/headerBG.gif)repeat-x,
-              url(../images/footerBG.gif)repeat-x,
               url(../images/11.jpg)no-repeat;
-  background-position:  top, bottom, center,;
+  background-position:  top, center;
   background-size: auto;
-  background-attachment: scroll, scroll, fixed;
+  background-attachment: scroll, fixed;
 }
 body {
   width: 70%;
@@ -112,6 +111,8 @@ nav {
   color: $offwhite;
   font-size: .75em;
 }
+//SEARCH DROP DOWN*****************************************************
+
 //FEATURED STYLES *****************************************************
 main {
     @extend %clearfix;
@@ -164,18 +165,19 @@ input[type="submit"] {
   background-color: $maroon;
   color: $offwhite;
   width: 30%;
-  padding: 2%;
+  padding: 3%;
+  margin-top: 1em;
 }
 
 //FOOTER STYLES *******************************************************
 footer {
   @extend %clearfix;
-  height: 150px;
+  // height: 150px;
+  color: $dkgrey;
+}
   small {
     display: block;
     margin: 1%;
     text-align: center;
-    color: $offwhite;
     font-size: .75em;
   }
-}

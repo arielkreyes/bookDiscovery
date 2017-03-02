@@ -17,9 +17,11 @@
   </nav>
   <nav class="legal">
     <ul>
-      <li><a href="#">Privacy Policy </a>|</li>
-      <li><a href="#">Terms of Use</a></li>
+      <li><a href="privacypolicy.php">Privacy Policy </a>|</li>
+      <li><a href="termsofuse.php">Terms of Use</a></li>
     </ul>
   </nav>
   <small>&copy;2017 book discovery</small>
 </footer>
+</body>
+</html>
