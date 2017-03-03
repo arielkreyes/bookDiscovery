@@ -60,7 +60,7 @@ include('header.php');
     $query = "INSERT INTO users
               (username, password, email, is_admin)
               VALUES
-              ('$usename', '$password', '$email', 0)";
+              ('$username', '$password', '$email', 0)";
               //hashing the passord here....
     //run it
     $result = $db->query($query);

@@ -25,7 +25,7 @@ $current_page = 1;
       //check to see if the result has rows(posts) :D
       if( $result->num_rows >= 1 ){
         //how many pages needed to hold all results?
-        $total_pages = ceil( $total_posts / $per_page );
+        $total_pages = ceil( $total_reviews / $per_page );
         //what page is the user trying to view?
         //URL will look like search.php?keyword=cheese&page=2
         //if the ?page variable is not set, we are on page 1
@@ -47,7 +47,7 @@ $current_page = 1;
 
        <article>
          <h2>
-           <a href="single.php?review_id=<?php echo $row['review_id'] ?>">
+           <a href="single_rr.php?review_id=<?php echo $row['review_id'] ?>">
            <?php echo $row['title']; ?>
            </a>
          </h2>

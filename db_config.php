@@ -12,5 +12,6 @@ if($db->connect_error > 0){
   die('Can not connect to ze Database. Try again...maybe later...');
 }//end of if statement
 //hashes and salts enter here!
+define('SALT', 'mnkdfotikosjzsghkljdflkgj');
 //
 ?>

@@ -7,6 +7,12 @@ function convert_timestamp($ugly){
   //if echo was not present, it would not be spit out
   return $date->format('l, F, jS, Y');
 }
+function convert_timestampRSS($ugly){
+  $date = new DateTime($ugly);
+  //echo $date->format('l, F, jS, Y');
+  //if echo was not present, it would not be spit out
+  return $date->format('r');
+}
 /**
  * [to validate and sanitize user inputed data]
  * @param  [string] $dirtydata [string data(ie.username) inputted by user]

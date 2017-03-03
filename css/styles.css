@@ -50,13 +50,20 @@ nav {
 .utility {
   width: 30%;
   float: right;
-  margin: 1% 0 0 0; }
+  margin: 1% 0 0 0;
+  z-index: 100; }
   .utility li {
     font-size: .75em;
     padding-right: 3%; }
   .utility li:last-of-type {
     padding-right: 0;
     margin-right: 0; }
+
+.search {
+  position: relative;
+  float: right;
+  width: 70%;
+  right: 17%; }
 
 .global {
   padding-top: 9%; }

@@ -5,7 +5,7 @@ require('db_config.php');
 include_once('functions.php');
 //begin parsing LOGIN form IF the user has submitted :)
 if($_POST['did_login']){
-
+  $feedback = 'parser stuffs';
   //clean the values the user typed in:
   $username = clean_string($_POST['username']);
   $password = clean_string($_POST['password']);
@@ -47,19 +47,13 @@ if($_POST['did_login']){
         die($db->error);
       }
       //send to account page
-      header('location:useraccount');
+      header('location:account.php');
     }else{
       //show user Error
-      $feedback = 'Your username and password combination is incorrect. Please try again.'
+      $feedback = 'Your username and password combination is incorrect. Please try again.';
     }
   }//end of if num_rows check
   else{
     $feedback = 'Username or password are not the right length. Please try again.';
   }
-  }//end of if strlen
 }//end of if did_login
-
-
-
-
-?>

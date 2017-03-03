@@ -4,9 +4,11 @@ include_once('functions.php');
 //echo out the xml declaration since the</ characters confuse the PHP parser
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 //get up to 10 most recent page
-$query = "SELECT books.title, reviews.body, reviews.date, users.username, users.user_id, reviews.review_id
-          FROM reviews, books, users
+$query = "SELECT reviews.body, reviews.date, users.username, users.email, reviews.review_id, reviews.title as reviewtitle, books.title
+          FROM reviews, users, books
           WHERE users.user_id = reviews.user_id
+          AND reviews.is_published = 1
+          AND books.book_id = reviews.book_id
           ORDER BY reviews.date DESC
           LIMIT 10";
 //run it
@@ -25,11 +27,11 @@ if(!$result){
     <?php while($row = $result->fetch_assoc()){ ?>
     <item>
       <title><?php echo $row['title']; ?></title>
-      <link>https://localhost/reyesariel/blog/single.php?post_id=<?php echo $row['post_id']; ?></link>
-      <guid>https://localhost/reyesariel/blog/single.php?post_id=<?php echo $row['post_id']; ?></guid>
-      <pubDate>1200</pubDate>
-      <author><?php echo $row['username']; ?> (<?php echo $row['username']; ?>)</author>
-      <description><![CDATA[ <?php echo $row['body']; ?>]]></description>
+      <link>https://localhost/reyesariel/bookDiscovery/single_rr.php?review_id=<?php echo $row['review_id']; ?></link>
+      <guid>https://localhost/reyesariel/bookDiscovery/single_rr.php?review_id=<?php echo $row['review_id']; ?></guid>
+      <pubDate><?php echo convert_timestampRSS($row['date']); ?></pubDate>
+      <author><?php echo $row['email']; ?> (<?php echo $row['username']; ?>)</author>
+      <description><![CDATA[ <h2><?php echo $row['reviewtitle']; ?></h2><?php echo $row['body']; ?>]]></description>
     </item>
     <?php }//end of while loopy loop ?>
   </channel>

@@ -84,6 +84,7 @@ nav {
   width: 30%;
   float: right;
   margin: 1% 0 0 0;
+  z-index: 100;
   li {
     font-size: .75em;
     padding-right: 3%;
@@ -93,7 +94,14 @@ nav {
     margin-right: 0;
   }
 }
-
+//SEARCH BAR STYLES*****************************************************
+.search {
+  position: relative;
+  float: right;
+  width: 70%;
+  right: 17%;
+}
+//global Nav styles****************************************************
 .global {
   @extend %clearfix;
   padding-top: 9%;
@@ -111,7 +119,6 @@ nav {
   color: $offwhite;
   font-size: .75em;
 }
-//SEARCH DROP DOWN*****************************************************
 
 //FEATURED STYLES *****************************************************
 main {

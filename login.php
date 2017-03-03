@@ -1,5 +1,6 @@
 <?php
 require('db_config.php');
+include('login_parser.php');
 include('header.php');
 ?>
 

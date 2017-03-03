@@ -12,10 +12,11 @@ if(isset($_GET['review_id'])){
 <main>
 <?php
 //get the most recent 2 published book reviews
-$query = "SELECT books.title, reviews.body, reviews.date, users.username, reviews.review_id, reviews.user_id
-          FROM reviews, books, users
+$query = "SELECT books.title, reviews.body, reviews.date, users.username, users.user_id, reviews.review_id
+          FROM reviews, users, books
           WHERE users.user_id = reviews.user_id
-          AND reviews.review_id = $review_id
+          AND books.book_id = reviews.book_id
+          AND reviews.is_published = 1
           ORDER BY reviews.date DESC
           LIMIT 1";
 //run the query
@@ -28,7 +29,7 @@ if($result->num_rows >= 1){
   <article>
     <h3><?php echo $row['title']; ?></h3>
     <p><?php echo $row['body']; ?></p>
-    <div class="reviewInfo">
+    <div>
       By <?php echo $row['username']; ?>
       on <?php echo convert_timestamp($row['date']); ?>
     </div>
