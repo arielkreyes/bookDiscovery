@@ -13,7 +13,7 @@ if($_POST['did_login']){
   if(strlen($username) >= 5 AND strlen($username) <= 50 AND strlen($password) >= 8 ){
     //look up user in ze database
     $password = sha1($password . SALT);
-    $query = "SELECT user_id, is_admin
+    $query = "SELECT user_id
               FROM users
               WHERE username = '$username'
               AND password = '$password'

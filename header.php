@@ -1,27 +1,3 @@
-<?php
-// session_start();
-//security check!  If the user does not have a valid key, send them back to the login form
-$user_id = $_SESSION['user_id'];
-$security_key = $_SESSION['security_key'];
-$query = "SELECT *
-			FROM users
-			WHERE user_id = $user_id
-			AND security_key = '$security_key'
-			LIMIT 1";
-$result = $db->query($query);
-if( !$result ){
-	header('Location:../login.php?e=noresult');
-}
-if( $result->num_rows == 1 ){
-	//this person is allowed into the admin panel
-	$row = $result->fetch_assoc();
-	define('USERNAME', $row['username']);
-	define('IS_ADMIN', $row['is_admin']);
-	define('USER_ID', $row['user_id']);
-}else{
-	header('Location:../login.php?e=norows');
-}
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,21 +12,22 @@ if( $result->num_rows == 1 ){
     <header>
       <a href="index.php"><h1>Book Discovery</h1></a>
       <nav class="utility">
-
           <?php if('did_login'){ ?>
-          //if user succesfully logged in show username instead of register in utility nav bar
+					<ul class="utilityloggedin">
+            <li class="users"><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' ' . USERNAME; ?></a></li>
+
+            <li class="logout warn"><a href="../login.php?action=logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
+						<li><a href="rss.php"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+						<li><a href="#" alt="Search Icon" title="Search Icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+          </ul>
+					<?php }else{//end of did log in  ?>
           <ul>
           <li><a href="register.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Register </a></li>
           <li><a href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a></li>
           <li><a href="rss.php"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
           <li><a href="#" alt="Search Icon" title="Search Icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
           </ul>
-          <ul class="utilityloggedin">
-            <li class="users"><a href="admin_editprofile.php"><?php echo USERNAME; ?></a></li>
-            <li class="blog"><a href="../">Back to Blog</a></li>
-            <li class="logout warn"><a href="../login.php?action=logout">Log Out</a></li>
-          </ul>
-          <?php }//end of did log in  ?>
+					<?php }//end of else ?>
          <form class="search" action="search.php" method="get">
               <label for="the_keywords">
             <input type="search" name="keywords" id="the_keywords" placeholder="Discover..." value="<?php echo $keywords ?>"></label>
@@ -60,7 +37,7 @@ if( $result->num_rows == 1 ){
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="about.php">About</a></li>
-          <li><a href="#">Rate</a></li>
+          <li><a href="rate.php">Rate</a></li>
           <li><a href="#">Discover</a></li>
         </ul>
       </nav>

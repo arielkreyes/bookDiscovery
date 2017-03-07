@@ -1,6 +1,4 @@
 <?php
-require('db_config.php');
-include_once('functions.php');
 //begin parser
 if($_POST['did_register']){
   //sanitize everything
@@ -16,7 +14,7 @@ if($_POST['did_register']){
       $errors['username'] = 'choose a username between 5 and 50 characters long.';
     }else{
     //username is already taken
-    $query = "SELECT user FROM users
+    $query = "SELECT username FROM users
               WHERE username = '$username'
               LIMIT 1";
     //runs it
@@ -29,7 +27,7 @@ if($_POST['did_register']){
   //password wrong Length
   if(strlen($password) < 8 ){
     $valid = 0;
-    $errors['password'] = 'Your password needs to be at least 8 characters. Please try again.'
+    $errors['password'] = 'Your password needs to be at least 8 characters. Please try again.';
   }
   //email not correct format
   if( ! filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -56,14 +54,14 @@ if($_POST['did_register']){
   if($valid){
     //add salt to make it hard for hackers to have fun -_-
     $password = sha1($password . SALT);
-    $query = "INSERT INTO users
-              (username, password, email, is_admin)
+    echo $query = "INSERT INTO users
+              (username, password, email)
               VALUES
-              ('$username', '$password', '$email', 0)";
+              ('$username', '$password', '$email')";
     $result = $db->query($query);
     //if it worked, tell user to login and start exploring
     if($db->affected_rows == 1){
-      $feedback = 'Sorry, your account was not created. Please try again later.';
+      $feedback = 'Yay! youre created.';
     }
   }//end of if valid staetment!
   else{

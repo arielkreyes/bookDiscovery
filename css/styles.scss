@@ -36,7 +36,16 @@ $grey : rgb(36, 32, 32);
   }
 }
 //Use this in class required:) - @extend %clearfix;
-//DEFAULT STYLES******************************************
+
+//MIXINS YO!
+@mixin default-button(){
+  background: $maroon;
+  color: $offwhite;
+  text-align: center;
+  border: none;
+  padding: 4%;
+}
+//*******************************DEFAULT STYLES******************************************
 html {
   background: url(../images/headerBG.gif)repeat-x,
               url(../images/11.jpg)no-repeat;
@@ -119,7 +128,32 @@ nav {
   color: $offwhite;
   font-size: .75em;
 }
+// user local nav styles(account/quicklinks)**************************
+nav.usernav {
+  display: block;
+  width: 100px;
+  height: 400px;
+  background-color: $dkgrey;
+  float: right;
+}
 
+//BUTTONS!*************************************************************
+input[type="button"] {
+  // background: $maroon;
+  // color: $offwhite;
+  // text-align: center;
+  // border: none;
+  // padding: 4%;
+  @include default-button();
+}
+input[type="submit"] {
+  // background-color: $maroon;
+  // color: $offwhite;
+  // width: 30%;
+  // padding: 3%;
+  // margin-top: 1em;
+  @include default-button();
+}
 //FEATURED STYLES *****************************************************
 main {
     @extend %clearfix;
@@ -142,12 +176,24 @@ h2 {
   font-family: midnightOwl, serif;
   color: $grey;
 }
-//COLUMNS!!!*******************************************
-//2COLS --
-.leftCol {
-  max-width: 50%;
+//FIGURES OF ALL KINDS*******************************************
+//currentlyReading
+figure.currentlyReading {
+  width: 100%;
+  height: 300px;
+  img {
+    float: left;
+  }
+  figcaption {
+    float:left;
+  }
+}
+//rateSquare --
+
+figure.rateSquare {
+  width: 35%;
+  text-align: center;
   float: left;
-  @extend %clearfix;
 }
 //FORM STYLES******************************************
 form h3 {
@@ -168,12 +214,13 @@ input {
   border: none;
   background-color: $offwhite;
 }
-input[type="submit"] {
-  background-color: $maroon;
-  color: $offwhite;
-  width: 30%;
-  padding: 3%;
-  margin-top: 1em;
+//BOOKSHELVES*********************************************************
+.bookshelf {
+  @extend %clearfix;
+  background-image: url(../images/bookshelf.jpg)no-repeat;
+  background-position: center;
+  // width: 100%;
+  // height: 19.47%;
 }
 
 //FOOTER STYLES *******************************************************
