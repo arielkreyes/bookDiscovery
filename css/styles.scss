@@ -2,11 +2,13 @@
 @charset "UTF-8";
 // @import 'reset';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://use.fontawesome.com/ea07c8ffc1.js);
 //colors
 $maroon : rgb(39, 21, 20);
 $offwhite : rgb(193, 190, 185);
 $dkgrey : rgb(28, 25, 25);
 $grey : rgb(36, 32, 32);
+$dkgreen : rgb(7, 38, 0);
 
 //fonts
 //midnight Owl Regular
@@ -44,6 +46,20 @@ $grey : rgb(36, 32, 32);
   text-align: center;
   border: none;
   padding: 4%;
+  margin-right: 0;
+}
+@mixin featured-default(){
+  max-width: 100%;
+  height: 425px;
+  position: relative;
+  color: $grey;
+  font-family: midnightOwl, serif;
+}
+@mixin rated-number(){
+  font-family: midnightOwl, serif;
+  color: $dkgreen;
+  font-size: 2em;
+  //using javascript change the css color depending on rating
 }
 //*******************************DEFAULT STYLES******************************************
 html {
@@ -129,72 +145,105 @@ nav {
   font-size: .75em;
 }
 // user local nav styles(account/quicklinks)**************************
-nav.usernav {
-  display: block;
-  width: 100px;
-  height: 400px;
+nav.userNav {
+  width: 60px;
+  height: 166px;
   background-color: $dkgrey;
   float: right;
+  color: $offwhite;
+  padding: 5% 0;
+  ul {
+    display: block;
+    list-style-type: none;
+  }
+  li {
+    padding: 20% 0;
+  }
+  li a {
+    text-align: center;
+  }
 }
 
 //BUTTONS!*************************************************************
 input[type="button"] {
-  // background: $maroon;
-  // color: $offwhite;
-  // text-align: center;
-  // border: none;
-  // padding: 4%;
   @include default-button();
 }
 input[type="submit"] {
-  // background-color: $maroon;
-  // color: $offwhite;
-  // width: 30%;
-  // padding: 3%;
-  // margin-top: 1em;
-  @include default-button();
+  background-color: $maroon;
+  color: $offwhite;
+  width: 30%;
+  padding: 3%;
+  margin-top: 1em;
+  // @include default-button();
 }
 //FEATURED STYLES *****************************************************
 main {
-    @extend %clearfix;
+  @extend %clearfix;
 }
-.featured {
-  background: url(../images/aboutFeatured.png)no-repeat;
-  background-position: right;
-  background-size: contain;
-  overflow: hidden;
-  height: 350px;
-  position: relative;
+section.featured {
+  @include featured-default();
+  background-color: $offwhite;
+  height: 250px;
 }
 h2 {
-  font-family: midnightOwl, serif;
   font-size: 2em;
   // line-height: 2.72em;
   color: $dkgrey;
+  float: left;
 }
-.featured p {
-  font-family: midnightOwl, serif;
-  color: $grey;
+div.featuredTitle {
+ position: absolute;
+ top: 20%;
+ left: 15%
 }
 //FIGURES OF ALL KINDS*******************************************
+section.default {
+  // @extend %clearfix;
+}
 //currentlyReading
-figure.currentlyReading {
+section.currentlyReading {
   width: 100%;
   height: 300px;
+  .bookInfo {
+    padding-left: 5%;
+  }
   img {
     float: left;
   }
   figcaption {
-    float:left;
+    float: left;
   }
 }
-//rateSquare --
 
+section.currentlyReading input[type="button"] {
+  display: inline;
+}
+//recentlyRated
+
+//rateSquare --
 figure.rateSquare {
-  width: 35%;
+  max-width: 20%;
   text-align: center;
   float: left;
+  margin: 5% 3%;
+  figcaption {
+    padding: 5% 0;
+    p {
+      @include rated-number;
+      float: left;
+      max-width: 10%;
+    }
+    input.review {
+      @include default-button;
+      float: right;
+      max-width: 80%;
+    }
+  }
 }
+  //rangeslider styles --
+label.rating {
+    height: 50px;
+  }
 //FORM STYLES******************************************
 form h3 {
   font-size: 1.5em;

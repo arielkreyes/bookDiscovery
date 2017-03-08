@@ -1,6 +1,5 @@
 <?php
 require('db_config.php');
-//include template shits
 require_once('functions.php');
 include('header.php');
 ?>
@@ -10,7 +9,7 @@ include('header.php');
         <p>(That you can open and smell that new book smell.)</p>
       </div>
     </section>
-    <main id="about">
+    <main class="about">
       <h3>About Us</h3>
       <p>We’re just people who love to read books! Whether it be for educational purposes or just for the heck of it, sharing our insights and discovering new books is our passion. Even in this digital age, the feeling of opening a new book, and smelling the new book smells forces “our” brain to produce happiness when standing in our shoes. The turn of every page is a brand new, and different adventure for every single reader and that is what we believe to be priceless.
 

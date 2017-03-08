@@ -12,11 +12,12 @@
     <header>
       <a href="index.php"><h1>Book Discovery</h1></a>
       <nav class="utility">
-          <?php if('did_login'){ ?>
-					<ul class="utilityloggedin">
-            <li class="users"><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' ' . USERNAME; ?></a></li>
+          <?php if('did_login'){
+            include("security.php"); ?>
+					<ul class="utilityLoggedin">
+            <li class="users"><a href="account.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' ' . USERNAME; ?></a></li>
 
-            <li class="logout warn"><a href="../login.php?action=logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
+            <li class="logoutWarn"><a href="../login.php?action=logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
 						<li><a href="rss.php"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
 						<li><a href="#" alt="Search Icon" title="Search Icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
           </ul>
@@ -38,7 +39,7 @@
           <li><a href="index.php">Home</a></li>
           <li><a href="about.php">About</a></li>
           <li><a href="rate.php">Rate</a></li>
-          <li><a href="#">Discover</a></li>
+          <li><a href="discover.php">Discover</a></li>
         </ul>
       </nav>
     </header>

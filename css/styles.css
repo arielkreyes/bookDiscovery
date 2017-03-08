@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://use.fontawesome.com/ea07c8ffc1.js);
 @font-face {
   font-family: midnightOwl;
   src: url(../fonts/midnightOwlR/MidnightOwl.eot), url(../fonts/midnightOwlR/MidnightOwl.svg), url(../fonts/midnightOwlR/MidnightOwl.woff), url(../fonts/midnightOwlR/MidnightOwl.ttf); }
@@ -79,56 +80,93 @@ nav {
   color: #c1beb9;
   font-size: .75em; }
 
-nav.usernav {
-  display: block;
-  width: 100px;
-  height: 400px;
+nav.userNav {
+  width: 60px;
+  height: 166px;
   background-color: #1c1919;
-  float: right; }
+  float: right;
+  color: #c1beb9;
+  padding: 5% 0; }
+  nav.userNav ul {
+    display: block;
+    list-style-type: none; }
+  nav.userNav li {
+    padding: 20% 0; }
+  nav.userNav li a {
+    text-align: center; }
 
 input[type="button"] {
   background: #271514;
   color: #c1beb9;
   text-align: center;
   border: none;
-  padding: 4%; }
+  padding: 4%;
+  margin-right: 0; }
 
 input[type="submit"] {
-  background: #271514;
+  background-color: #271514;
   color: #c1beb9;
-  text-align: center;
-  border: none;
-  padding: 4%; }
+  width: 30%;
+  padding: 3%;
+  margin-top: 1em; }
 
-.featured {
-  background: url(../images/aboutFeatured.png) no-repeat;
-  background-position: right;
-  background-size: contain;
-  overflow: hidden;
-  height: 350px;
-  position: relative; }
+section.featured {
+  max-width: 100%;
+  height: 425px;
+  position: relative;
+  color: #242020;
+  font-family: midnightOwl, serif;
+  background-color: #c1beb9;
+  height: 250px; }
 
 h2 {
-  font-family: midnightOwl, serif;
   font-size: 2em;
-  color: #1c1919; }
+  color: #1c1919;
+  float: left; }
 
-.featured p {
-  font-family: midnightOwl, serif;
-  color: #242020; }
+div.featuredTitle {
+  position: absolute;
+  top: 20%;
+  left: 15%; }
 
-figure.currentlyReading {
+section.currentlyReading {
   width: 100%;
   height: 300px; }
-  figure.currentlyReading img {
+  section.currentlyReading .bookInfo {
+    padding-left: 5%; }
+  section.currentlyReading img {
     float: left; }
-  figure.currentlyReading figcaption {
+  section.currentlyReading figcaption {
     float: left; }
 
+section.currentlyReading input[type="button"] {
+  display: inline; }
+
 figure.rateSquare {
-  width: 35%;
+  max-width: 20%;
   text-align: center;
-  float: left; }
+  float: left;
+  margin: 5% 3%; }
+  figure.rateSquare figcaption {
+    padding: 5% 0; }
+    figure.rateSquare figcaption p {
+      font-family: midnightOwl, serif;
+      color: #072600;
+      font-size: 2em;
+      float: left;
+      max-width: 10%; }
+    figure.rateSquare figcaption input.review {
+      background: #271514;
+      color: #c1beb9;
+      text-align: center;
+      border: none;
+      padding: 4%;
+      margin-right: 0;
+      float: right;
+      max-width: 80%; }
+
+label.rating {
+  height: 50px; }
 
 form h3 {
   font-size: 1.5em; }
