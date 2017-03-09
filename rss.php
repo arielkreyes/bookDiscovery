@@ -1,6 +1,6 @@
 <?php
 require('db_config.php');
-include_once('functions.php');
+require_once('functions.php');
 //echo out the xml declaration since the</ characters confuse the PHP parser
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 //get up to 10 most recent page

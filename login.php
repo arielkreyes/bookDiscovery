@@ -1,6 +1,8 @@
 <?php
 require('db_config.php');
+require_once('functions.php');
 include('login_parser.php');
+security_check();
 include('header.php');
 ?>
 

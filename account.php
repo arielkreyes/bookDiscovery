@@ -1,7 +1,9 @@
 <?php
 require('db_config.php');
 require_once('functions.php');
+security_check(true);
 include('header.php');
+
 ?>
  <section class="featured userAccount">
    <?php

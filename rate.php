@@ -7,19 +7,12 @@ include('header.php');
   <h2>How To Rate!</h2>
 </section>
 <main>
-  <?php
-  $query = "SELECT ratings.*, users.user_id
-            FROM users,ratings
-            WHERE users.user_id = ratings.user_id 
-
-            ";
-  ?>
   <figure class='rateSquare'>
     <img src="uploads/default_small.jpg"/>
     <figcaption>
       <div>
        <label for="rating">
-       <input type="range" min="1" max="5" step="1" value="3" id="rating" data-rangeslider>
+       <input type="range" min="1" max="5" step="1" value="3" id="rating" class="rating_handle" data-rangeslider>
        </label>
        <div class="rangeOutput">
          <p><output for="rating" id="rated">3</output></p>
@@ -31,4 +24,5 @@ include('header.php');
 </main>
 <?php
 include('footer.php');
+include('js/rangeslider_func.php');
 ?>

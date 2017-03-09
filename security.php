@@ -1,4 +1,5 @@
 <?php
+require('db_config.php');
 //security check!  If the user does not have a valid key, send them back to the login form
 $user_id = $_SESSION['user_id'];
 $security_key = $_SESSION['security_key'];
