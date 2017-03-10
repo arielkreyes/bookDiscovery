@@ -6,7 +6,7 @@ include('header.php');
 include('rate_parser.php');
 ?>
 <section class="featured">
-
+<h2>Rate It. Review It. Love It.</h2>
 </section>
 <main>
   <?php

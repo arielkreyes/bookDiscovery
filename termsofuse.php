@@ -1,5 +1,7 @@
 <?php
 require('db_config.php');
+require_once('functions.php');
+security_check();
 include('header.php');
 ?>
 <main>
@@ -7,7 +9,7 @@ include('header.php');
 
 <h3>1. Terms</h3>
 
-  <p>By accessing the website at&nbsp;<a href="http://bookdiscovery.com">http://bookdiscovery.com</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+  <p>By accessing the website at bookdiscovery.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
 
 <h3>2. Use License</h3>
 

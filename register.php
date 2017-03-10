@@ -5,9 +5,11 @@ include('header.php');
 include('register_parser.php');
 ?>
 <main>
-  <section class="featured">
+  <section class="featured register">
     <img src="images/register_featured.jpg" />
+    <div class="featuredText">
     <h2>You're on your way to a whole new world</h2>
+    </div>
   </section>
   <div class="leftCol">
     <!-- User Create/Register for Account here! :D -->

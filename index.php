@@ -6,11 +6,16 @@ include('header.php');
 ?>
     <section class="featured home">
       <img src="images/home_featured.jpg" />
-        <h2>We Just Love Books.</h2>
-        <p>(That you can open and smell that new book smell.)</p>
     </section>
     <main>
-      <h3>About Us</h3>
+      <h3>Steps for a successful experience on book discovery.</h3>
+      <ul class="steps">
+        <li>Step 1: Discover a Book.</li>
+        <li>Step 2: Read It.</li>
+        <li>Step 3: Rate It.</li>
+        <li>Step 4: Review It.</li>
+        <li>Step 5: Repeat.</li>
+      </ul>
     </main>
 <?php
 include('footer.php');

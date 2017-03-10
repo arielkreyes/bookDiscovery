@@ -11,7 +11,7 @@ include('header.php');
              FROM users
              WHERE ";
    ?>
-   <div class="featuredTitle">
+   <div class="featuredText">
    <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>Welcome, <?php echo USERNAME; ?></h2>
    </div>
    <nav class="userNav">
@@ -57,7 +57,7 @@ include('header.php');
 		while( $row = $result->fetch_assoc() ){
   ?>
     <figure class="rateSquare">
-      <img src="https://placeimg.com/150/200/any" alt="<?php echo $row['book_cover'] . ' Book Cover'; ?>" title="<?php echo $row['book_cover'];?>"/>
+      <img src="<?php show_book_cover($row['book_id']); ?>" alt="<?php echo $row['book_cover'] . ' Book Cover'; ?>" title="<?php echo $row['book_cover'];?>"/>
       <figcaption>
         <p><?php echo $row['rating_value']; ?></p>
         <!-- //if rated book does not have a review attached then show review button
@@ -68,16 +68,5 @@ include('header.php');
   </section>
 <?php }//end of while loop
 }//end of if num_rows ?>
-  <section class="default bookshelf readBooks">
-    <p>
-      Images/Javascript of read books
-    </p>
-  </section>
-
-  <section class="default bookshelf wishlist">
-    <p>
-      Images/Javascript of wishlist
-    </p>
-  </section>
 </main>
 <?php include('footer.php');  ?>

@@ -1,10 +1,11 @@
 <footer>
   <nav class="global">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Rate</a></li>
-      <li><a href="#">Discover</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.php">About</a></li>
+      <li><a href="rate.php">Rate</a></li>
+      <li><a href="discover.php">Discover</a></li>
+      <li><a href="Account.php">Account</a></li>
     </ul>
   </nav>
   <nav class="social">

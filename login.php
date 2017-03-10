@@ -7,12 +7,12 @@ include('header.php');
 ?>
 
 <main>
-  <section class="featured">
+  <section class="featured login">
     <img src="images/login_featured.jpg" />
-    <h2>welcome Back!</h2>
-    <p>
-      Quick! Get back to rating and reviewing your favorite titles and the best part? Discover new adventures!
-    </p>
+    <div class="featuredText">
+    <h2>welcome Back!</h2><br />
+    <br /><p>Quick! Get back to rating and reviewing your favorite titles and the best part? <br/>Discover new adventures!</p>
+  </div>
   </section>
   <div class="leftCol">
     <!-- User Create/Register for Account here! :D -->
