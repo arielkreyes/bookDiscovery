@@ -5,7 +5,6 @@
     <title>Book Discovery</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
-    <link rel="stylesheet" href="css/rangeslider.css" />
     <link rel="alternate" type="application/rss+xml" href="rss.php" title="book discovery RSS feed!" />
     <script src="https://use.fontawesome.com/ea07c8ffc1.js"></script>
   </head>

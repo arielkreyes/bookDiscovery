@@ -8,6 +8,7 @@ include('header.php');
 
 <main>
   <section class="featured">
+    <img src="images/login_featured.jpg" />
     <h2>welcome Back!</h2>
     <p>
       Quick! Get back to rating and reviewing your favorite titles and the best part? Discover new adventures!

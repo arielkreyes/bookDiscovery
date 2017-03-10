@@ -6,6 +6,7 @@ include('register_parser.php');
 ?>
 <main>
   <section class="featured">
+    <img src="images/register_featured.jpg" />
     <h2>You're on your way to a whole new world</h2>
   </section>
   <div class="leftCol">

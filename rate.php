@@ -6,16 +6,22 @@ include('header.php');
 include('rate_parser.php');
 ?>
 <section class="featured">
-  <h2>How To Rate!</h2>
+
 </section>
 <main>
   <?php
-  $query = "SELECT books.book_cover
+  $query = "SELECT books.book_cover,books.book_id, ratings.rating_value
             FROM books, ratings
+            ORDER BY books.book_id DESC
             LIMIT 9";
+  //run it
+  $result = $db->query($query);
+  //check it
+  if($result->num_rows == 1){
   ?>
   <figure class='rateSquare oneThird'>
-    <img src="uploads/default_small.jpg"/>
+    	<?php while( $row = $result->fetch_assoc() ){
+        show_book_cover($row['book_id']); ?>
     <figcaption>
       <div>
       <?php echo $feedback; ?>
@@ -33,6 +39,9 @@ include('rate_parser.php');
      </div>
     </figcaption>
   </figure>
+  <?php
+  }//end of while loop
+ }//end of if statement ?>
 </main>
 <?php
 include('footer.php');

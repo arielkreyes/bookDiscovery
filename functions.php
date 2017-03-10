@@ -79,9 +79,23 @@ function show_feedback( $feedback, $errors = array() ){
    	header('Location:login.php?e=norows');
     }
    }
+ }
 
-
-
-
-
+ function show_book_cover( $book_id ){
+  global $db;
+  $query = "SELECT book_cover
+      FROM books
+      WHERE book_id = $book_id
+      LIMIT 1";
+  $result = $db->query($query);
+  if( $result->num_rows == 1 ){
+    //display the image if it exists, otherwise show the default userpic
+    $row = $result->fetch_assoc();
+    if( $row['book_cover'] != '' ){
+      echo '<img src="' . ROOT_URL . 'uploads/' . $row['book_cover'] .
+      '.jpg" class="bookCover" alt="' . $row['book_cover'] . 'Book Cover">';
+    }else{
+      echo '<img src="' . ROOT_URL . 'images/default' . '.jpg" class="bookCover" alt="default bookcover">';
+    }
+  }
  }
