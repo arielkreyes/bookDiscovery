@@ -5,8 +5,11 @@ security_check();
 include('header.php');
 include('rate_parser.php');
 ?>
-<section class="featured">
+<section class="featured rate">
+  <img src="images/rate_featured.jpg" />
+<div class="featuredText">
 <h2>Rate It. Review It. Love It.</h2>
+</div>
 </section>
 <main>
   <?php

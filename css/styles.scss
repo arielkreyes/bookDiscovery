@@ -15,23 +15,20 @@ $dkgreen : rgb(7, 38, 0);
   src: url(../fonts/midnightOwlR/MidnightOwl.eot),url(../fonts/midnightOwlR/MidnightOwl.svg),url(../fonts/midnightOwlR/MidnightOwl.woff),url(../fonts/midnightOwlR/MidnightOwl.ttf);
 }
 //USEFULL SHINDIGS
-//box-sizing:borderbox
-.component {
-  box-sizing: content-box;
-}
+//MIXINS YO!
 //clear fixins'
 //http://blog.teamtreehouse.com/a-better-clearfix-with-sass
 //using a placeholder selector
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
-//Use this in class required:) - @extend %clearfix;
-
-//MIXINS YO!
 @mixin default-button(){
   background: $maroon;
   color: $offwhite;
@@ -45,9 +42,7 @@ $dkgreen : rgb(7, 38, 0);
   max-width: 100%;
   height: 423px;
   position: relative;
-  // color: $grey;
   font-family: midnightOwl, serif;
-  overflow: visible;
 }
 @mixin rated-number(){
   font-family: midnightOwl, serif;
@@ -56,16 +51,22 @@ $dkgreen : rgb(7, 38, 0);
   //using javascript change the css color depending on rating
 }
 //*******************************DEFAULT STYLES******************************************
+*,
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 html {
   background: url(../images/headerBG.gif)repeat-x,
-              // url(../images/home_featured.jpg)no-repeat, 0 107px,
               url(../images/11.jpg)no-repeat;
   background-position:  top, center;
   background-size: auto;
   background-attachment: scroll, fixed;
 }
 body {
-  width: 70%;
+  max-width: 70%;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   p {
@@ -92,9 +93,8 @@ h3 {
   font-size: 2em;
   padding: 2% 2% 2% 0;
 }
-nav {
-  text-align:center;
   ul {
+    text-align:center;
     list-style: none;
   }
   li {
@@ -104,14 +104,11 @@ nav {
     text-decoration: none;
     color: $offwhite;
   }
-}
-ul.steps {
-  list-style: none;
-  li {
-    display: inline-block;
+
+ul.steps li {
     padding: 2%;
   }
-}
+
 p.colone, p.coltwo {
   float: left;
   width: 45%;
@@ -133,13 +130,16 @@ p.colone, p.coltwo {
 //SEARCH BAR STYLES*****************************************************
 .search {
   position: relative;
-  float: right;
-  width: 70%;
-  right: 17%;
+  left: 17%;
+}
+input[type=search] + input[type=submit] {
+  background-color: $offwhite;
+  color: $maroon;
+  max-width: 30%;
 }
 //global Nav styles****************************************************
 .global {
-  @extend %clearfix;
+  @include clearfix;
   padding-top: 9%;
   li {
    padding-right: 10%;
@@ -192,22 +192,24 @@ span {
 }
 //FEATURED STYLES *****************************************************
 main {
-  @extend %clearfix;
+  @include clearfix;
 }
 section.featured {
   @include featured-default();
-}
-section img{
-  overflow: visible;
-  position: absolute;
-  left: -203px;
-  top: -5px;
+  background-image: url()
 }
 h2 {
   font-size: 2em;
   color: $dkgrey;
   float: left;
   z-index: 50;
+}
+.rate div.featuredText {
+  position: absolute;
+  top: 210px;
+  left: 75px;
+  z-index: 20;
+  font-family: MidnightOwl, serif;
 }
 .discover div.featuredText {
   position: absolute;
@@ -242,7 +244,7 @@ h2 {
 }
 //FIGURES OF ALL KINDS*******************************************
 section.default {
-  // @extend %clearfix;
+  @include clearfix;
 }
 //currentlyReading
 section.currentlyReading {
@@ -266,6 +268,7 @@ section.currentlyReading input[type="button"] {
 
 //rateSquare --
 figure.rateSquare {
+  @include clearfix;
   max-width: 20%;
   //recently rated on account page width...width changes on the rate page itself 1/3
   text-align: center;
@@ -375,7 +378,7 @@ input {
 }
 //BOOKSHELVES*********************************************************
 .bookshelf {
-  @extend %clearfix;
+  @include clearfix;
   background-image: url(../images/bookshelf.jpg)no-repeat;
   background-position: center;
   // width: 100%;
@@ -384,11 +387,15 @@ input {
 
 //FOOTER STYLES *******************************************************
 footer {
-  @extend %clearfix;
+  @include clearfix;
   // height: 150px;
-  color: $maroon;
+  width: 100%;
+  background: url(../images/headerBG.gif)repeat-x;
+  background-position: bottom;
+  background-size: auto;
+  color: $offwhite;
   .global li a, .social li a, .legal li a {
-    color: $maroon;
+    color: $offwhite;
   }
 }
   small {

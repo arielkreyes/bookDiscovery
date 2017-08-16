@@ -1,6 +1,4 @@
 <?php
-
-
 function convert_timestamp($ugly){
   $date = new DateTime($ugly);
   //echo $date->format('l, F, jS, Y');

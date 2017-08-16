@@ -31,6 +31,7 @@
          <form class="search" action="search.php" method="get">
               <label for="the_keywords">
             <input type="search" name="keywords" id="the_keywords" placeholder="Discover..." value="<?php echo $keywords ?>"></label>
+            <input type="submit" value="Find" class="btn_search" />
           </form>
       </nav>
       <nav class="global">
