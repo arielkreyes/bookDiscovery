@@ -6,28 +6,22 @@ include('header.php');
 include('rate_parser.php');
 ?>
 <section class="featured rate">
-  <img src="images/rate_featured.jpg" />
+  <!-- <img src="images/rate_featured.jpg" /> -->
 <div class="featuredText">
 <h2>Rate It. Review It. Love It.</h2>
 </div>
 </section>
 <main>
-  <?php
-  $query = "SELECT books.book_cover,books.book_id, ratings.rating_value
-            FROM books, ratings
-            ORDER BY books.book_id DESC
-            LIMIT 9";
-  //run it
-  $result = $db->query($query);
-  //check it
-  if($result->num_rows == 1){
-  ?>
-  <figure class='rateSquare oneThird'>
-    	<?php while( $row = $result->fetch_assoc() ){
-        show_book_cover($row['book_id']); ?>
+  <h3>Rate & Review</h3>
+  <p class="colone">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p><p class="coltwo"
+  > totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+  <div class="ratingArea">
+  <figure class="rateSquare oneThird">
+        <img src="uploads/chemist.jpg" alt="The Chemist by Stephanie Meyer"/>
     <figcaption>
+        <h4>The Chemist</h4>
+  <h5>by Stephanie Meyer</h5>
       <div>
-      <?php echo $feedback; ?>
       <form method="post" action="rate.php">
        <label for="rating">
        <input type="range" min="1" max="5" step="1" value="3" name="rating" class="rating_handle">
@@ -36,15 +30,31 @@ include('rate_parser.php');
        <input type="submit" value="Rate It!"/>
        <input type="hidden" name="did_rate" value="true" />
        <input type="hidden" name="bookId" value="1" />
-       <!-- TODO change the value to read the book id  -->
      </form>
        <input type="button" value="+ Review" class="review"/>
      </div>
     </figcaption>
   </figure>
-  <?php
-  }//end of while loop
- }//end of if statement ?>
+    <figure class="rateSquare oneThird">
+        <img src="uploads/princeofthorns.jpg" alt="The Chemist by Stephanie Meyer"/>
+    <figcaption>
+        <h4>Prince of Thorns</h4>
+  <h5>by Martin Lawrence</h5>
+      <div>
+      <form method="post" action="rate.php">
+       <label for="rating">
+       <input type="range" min="1" max="5" step="1" value="3" name="rating" class="rating_handle">
+       </label>
+       <p><output for="rating" id="rated">3</output></p>
+       <input type="submit" value="Rate It!"/>
+       <input type="hidden" name="did_rate" value="true" />
+       <input type="hidden" name="bookId" value="1" />
+     </form>
+       <input type="button" value="+ Review" class="review"/>
+     </div>
+    </figcaption>
+  </figure>
+  </div>
 </main>
 <?php
 include('footer.php');

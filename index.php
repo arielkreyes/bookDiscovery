@@ -5,7 +5,6 @@ security_check();
 include('header.php');
 ?>
     <section class="featured home">
-      <img src="images/home_featured.jpg" />
     </section>
     <main>
       <h3>Steps for a successful experience on book discovery.</h3>

@@ -15,7 +15,7 @@ if($db->connect_error > 0){
 //hashes and salts enter here!
 define('SALT', 'mnkdfotikosjzsghkljdflkgj');
 // define path for background images for the featured section
-define('ROOT_URL', 'http://localhost/bookDiscovery/');
-define('ROOT_PATH', 'C:\xampp\htdocs\bookDiscovery');
+define('ROOT_URL', 'http://localhost/akr/bookDiscovery/');
+define('ROOT_PATH', 'C:\xampp\htdocs\akr\bookDiscovery');
 //
 ?>

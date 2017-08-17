@@ -11,7 +11,6 @@ if(isset($_GET['review_id'])){
 }
 ?>
     <section class="featured discover">
-      <img src="images/discover_featured.jpg" />
       <div class="featuredText">
         <h2>New Books. New Adventures. New Knowledge.</h2>
         <p>Search and discover the latest and greatest.</p>
@@ -38,7 +37,7 @@ if(isset($_GET['review_id'])){
 
 
       <article>
-        <h3><?php echo $row['title']; ?></h3>
+        <h4><?php echo $row['title']; ?></h4>
         <p><?php echo $row['body']; ?></p>
         <div>
           By <?php echo $row['username']; ?>

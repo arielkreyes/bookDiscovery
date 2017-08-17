@@ -19,15 +19,12 @@ $dkgreen : rgb(7, 38, 0);
 //clear fixins'
 //http://blog.teamtreehouse.com/a-better-clearfix-with-sass
 //using a placeholder selector
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 @mixin default-button(){
   background: $maroon;
@@ -60,17 +57,16 @@ html {
 }
 html {
   background: url(../images/headerBG.gif)repeat-x,
-              url(../images/11.jpg)no-repeat;
+  url(../images/11.jpg)no-repeat;
   background-position:  top, center;
   background-size: auto;
   background-attachment: scroll, fixed;
 }
 body {
-  max-width: 70%;
   font-family: 'Open Sans', sans-serif;
-  margin: 0 auto;
+  margin: 0 5% auto;
   p {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
   }
 }
 //HEADER STYLES & NAVIGATION *****************************************
@@ -93,6 +89,9 @@ h3 {
   font-size: 2em;
   padding: 2% 2% 2% 0;
 }
+h4 {
+  padding: 2% 2% 2% 0;
+}
   ul {
     text-align:center;
     list-style: none;
@@ -110,6 +109,7 @@ ul.steps li {
   }
 
 p.colone, p.coltwo {
+  // @extend .clearfix;
   float: left;
   width: 45%;
 }
@@ -129,24 +129,43 @@ p.colone, p.coltwo {
 }
 //SEARCH BAR STYLES*****************************************************
 .search {
-  position: relative;
-  left: 17%;
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  position: absolute;
+  top: 40px;
+  left: 675px;
 }
-input[type=search] + input[type=submit] {
+input[type=search] {
+  padding: 3%;
+  width: 95%;
+}
+.btn_search {
+  border: solid 2px $offwhite;
+  color: $offwhite;
+  max-width: 30%;
+  padding: 3%;
+}
+.btn_search:hover {
   background-color: $offwhite;
   color: $maroon;
-  max-width: 30%;
 }
 //global Nav styles****************************************************
 .global {
-  @include clearfix;
-  padding-top: 9%;
+  // @extend .clearfix;
+  padding: 0 0 3% 0;
   li {
    padding-right: 10%;
   }
   li:last-of-type {
     padding-right: 0;
   }
+}
+header nav.global {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
 }
 .social {
   margin: 1%;
@@ -184,7 +203,6 @@ input[type="submit"] {
   color: $offwhite;
   width: 30%;
   padding: 2%;
-  margin-top: 1em;
 }
 span {
   font-style: italic;
@@ -192,17 +210,22 @@ span {
 }
 //FEATURED STYLES *****************************************************
 main {
-  @include clearfix;
-}
-section.featured {
-  @include featured-default();
-  background-image: url()
+  @extend .clearfix;
 }
 h2 {
   font-size: 2em;
   color: $dkgrey;
   float: left;
   z-index: 50;
+}
+section.featured {
+  @include featured-default();
+}
+section.home {
+  background-image: url(../images/home_featured.jpg);
+}
+section.rate {
+  background-image: url(../images/rate_featured.jpg);
 }
 .rate div.featuredText {
   position: absolute;
@@ -211,19 +234,30 @@ h2 {
   z-index: 20;
   font-family: MidnightOwl, serif;
 }
+section.discover {
+  background-image: url(../images/discover_featured.jpg);
+}
 .discover div.featuredText {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 45%;
   z-index: 20;
   font-family: MidnightOwl, serif;
 }
+section.about {
+  background-image: url(../images/about_featured.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+  overflow: hidden;
+}
 .about div.featuredText {
   position: absolute;
-  top: 10%;
-  left: 0;
+  top: 20%;
+  left: 15%;
   z-index: 20;
 }
+
 .register div.featuredText {
   position: absolute;
   top: 22%;
@@ -244,7 +278,7 @@ h2 {
 }
 //FIGURES OF ALL KINDS*******************************************
 section.default {
-  @include clearfix;
+  @extend .clearfix;
 }
 //currentlyReading
 section.currentlyReading {
@@ -266,14 +300,20 @@ section.currentlyReading input[type="button"] {
 }
 //recentlyRated
 
+//Rating Area [Grid]
+div.ratingArea {
+  border: solid 2px yellow;
+  @extend .clearfix;
+  display: flex;
+}
 //rateSquare --
 figure.rateSquare {
-  @include clearfix;
-  max-width: 20%;
+  // @extend .clearfix;
+  // justify-content: flex-start;
+  max-width: 30%;
+  border: solid 3px yellow;
   //recently rated on account page width...width changes on the rate page itself 1/3
   text-align: center;
-  float: left;
-  margin: 5% 3%;
   figcaption {
     padding: 5% 0;
     p {
@@ -336,27 +376,27 @@ input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
 
-// /* All the same stuff for Firefox */
-// input[type=range]::-moz-range-thumb {
-//   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//   border: 1px solid #000000;
-//   // height: 36px;
-//   // width: 16px;
-//   border-radius: 50%;
-//   background: #ffffff;
-//   cursor: pointer;
-// }
-//
-// /* All the same stuff for IE */
-// input[type=range]::-ms-thumb {
-//   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//   border: 1px solid #000000;
-//   height: 36px;
-//   width: 16px;
-//   border-radius: 3px;
-//   background: #ffffff;
-//   cursor: pointer;
-// }
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  // height: 36px;
+  // width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
 //FORM STYLES******************************************
 form h3 {
   font-size: 1.5em;
@@ -377,26 +417,23 @@ input {
   background-color: $offwhite;
 }
 //BOOKSHELVES*********************************************************
-.bookshelf {
-  @include clearfix;
-  background-image: url(../images/bookshelf.jpg)no-repeat;
-  background-position: center;
+// .bookshelf {
+//   @extend .clearfix;
+//   background-image: url(../images/bookshelf.jpg)no-repeat;
+//   background-position: center;
   // width: 100%;
   // height: 19.47%;
-}
+// }
 
 //FOOTER STYLES *******************************************************
 footer {
-  @include clearfix;
-  // height: 150px;
-  width: 100%;
-  background: url(../images/headerBG.gif)repeat-x;
-  background-position: bottom;
-  background-size: auto;
+  background:  url(../images/whiteLogo.png), url(../images/footerBG.gif);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 5% ,left;
+  background-size: 150px 104px, cover;
+  background-blend-mode: overlay;
   color: $offwhite;
-  .global li a, .social li a, .legal li a {
-    color: $offwhite;
-  }
+  padding: 5%;
 }
   small {
     display: block;

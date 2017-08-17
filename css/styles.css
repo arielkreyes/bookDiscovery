@@ -3,31 +3,43 @@
 @font-face {
   font-family: midnightOwl;
   src: url(../fonts/midnightOwlR/MidnightOwl.eot), url(../fonts/midnightOwlR/MidnightOwl.svg), url(../fonts/midnightOwlR/MidnightOwl.woff), url(../fonts/midnightOwlR/MidnightOwl.ttf); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000323}}
+.clearfix:after, main:after, section.default:after, div.ratingArea:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000351}}
 *,
 html {
   box-sizing: border-box; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000355}}
 *, *:before, *:after {
   box-sizing: inherit; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000358}}
 html {
   background: url(../images/headerBG.gif) repeat-x, url(../images/11.jpg) no-repeat;
   background-position: top, center;
   background-size: auto;
   background-attachment: scroll, fixed; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000365}}
 body {
-  max-width: 70%;
   font-family: 'Open Sans', sans-serif;
-  margin: 0 auto; }
+  margin: 0 5% auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000368}}
   body p {
-    font-size: 1.5vw; }
+    font-size: 1.25vw; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000373}}
 header {
   color: #c1beb9;
   height: 110px;
   width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000379}}
 h1 {
   text-indent: -99em;
   background: url(../images/whiteLogosm.png) no-repeat;
@@ -37,68 +49,106 @@ h1 {
   float: left;
   margin: 1em 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000388}}
 h3 {
   font-size: 2em;
   padding: 2% 2% 2% 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000392}}
+h4 {
+  padding: 2% 2% 2% 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000395}}
 ul {
   text-align: center;
   list-style: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\0000399}}
 li {
   display: inline-block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003102}}
 a {
   text-decoration: none;
   color: #c1beb9; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003107}}
 ul.steps li {
   padding: 2%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003111}}
 p.colone, p.coltwo {
   float: left;
   width: 45%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003116}}
 .utility {
   width: 30%;
   float: right;
   margin: 1% 0 0 0;
   z-index: 100; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003121}}
   .utility li {
     font-size: .75em;
     padding-right: 3%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003125}}
   .utility li:last-of-type {
     padding-right: 0;
     margin-right: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003131}}
 .search {
-  position: relative;
-  left: 17%; }
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  position: absolute;
+  top: 40px;
+  left: 675px; }
 
-input[type=search] + input[type=submit] {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003139}}
+input[type=search] {
+  padding: 3%;
+  width: 95%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003143}}
+.btn_search {
+  border: solid 2px #c1beb9;
+  color: #c1beb9;
+  max-width: 30%;
+  padding: 3%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003149}}
+.btn_search:hover {
   background-color: #c1beb9;
-  color: #271514;
-  max-width: 30%; }
+  color: #271514; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003154}}
 .global {
-  padding-top: 9%; }
-  .global:before, .global:after {
-    content: "";
-    display: table; }
-  .global:after {
-    clear: both; }
+  padding: 0 0 3% 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003157}}
   .global li {
     padding-right: 10%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003160}}
   .global li:last-of-type {
     padding-right: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003164}}
+header nav.global {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003170}}
 .social {
   margin: 1%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003173}}
 .legal {
   color: #c1beb9;
   font-size: .75em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003178}}
 nav.userNav {
   width: 60px;
   height: 166px;
@@ -106,14 +156,18 @@ nav.userNav {
   float: right;
   color: #c1beb9;
   padding: 5% 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003185}}
   nav.userNav ul {
     display: block;
     list-style-type: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003189}}
   nav.userNav li {
     padding: 20% 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003192}}
   nav.userNav li a {
     text-align: center; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003198}}
 input[type="button"] {
   background: #271514;
   color: #c1beb9;
@@ -123,36 +177,41 @@ input[type="button"] {
   margin-right: 0;
   cursor: pointer; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003201}}
 input[type="submit"] {
   background-color: #271514;
   color: #c1beb9;
   width: 30%;
-  padding: 2%;
-  margin-top: 1em; }
+  padding: 2%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003207}}
 span {
   font-style: italic;
   color: rgba(28, 25, 25, 0.5); }
 
-main:before, main:after {
-  content: "";
-  display: table; }
-main:after {
-  clear: both; }
-
-section.featured {
-  max-width: 100%;
-  height: 423px;
-  position: relative;
-  font-family: midnightOwl, serif;
-  background-image: url(); }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003215}}
 h2 {
   font-size: 2em;
   color: #1c1919;
   float: left;
   z-index: 50; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003221}}
+section.featured {
+  max-width: 100%;
+  height: 423px;
+  position: relative;
+  font-family: midnightOwl, serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003224}}
+section.home {
+  background-image: url(../images/home_featured.jpg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003227}}
+section.rate {
+  background-image: url(../images/rate_featured.jpg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003230}}
 .rate div.featuredText {
   position: absolute;
   top: 210px;
@@ -160,72 +219,92 @@ h2 {
   z-index: 20;
   font-family: MidnightOwl, serif; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003237}}
+section.discover {
+  background-image: url(../images/discover_featured.jpg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003240}}
 .discover div.featuredText {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 45%;
   z-index: 20;
   font-family: MidnightOwl, serif; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003247}}
+section.about {
+  background-image: url(../images/about_featured.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003254}}
 .about div.featuredText {
   position: absolute;
-  top: 10%;
-  left: 0;
+  top: 20%;
+  left: 15%;
   z-index: 20; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003261}}
 .register div.featuredText {
   position: absolute;
   top: 22%;
   left: 10%;
   z-index: 20; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003266}}
   .register div.featuredText h2, .register div.featuredText p {
     color: white; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003270}}
 .login div.featuredText {
   position: absolute;
   top: 10%;
   left: 0;
   z-index: 20; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003275}}
   .login div.featuredText h2, .login div.featuredText p {
     display: block; }
 
-section.default:before, section.default:after {
-  content: "";
-  display: table; }
-section.default:after {
-  clear: both; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003284}}
 section.currentlyReading {
   width: 100%;
   height: 300px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003287}}
   section.currentlyReading .bookInfo {
     padding-left: 5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003290}}
   section.currentlyReading img {
     float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003293}}
   section.currentlyReading figcaption {
     float: left; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003298}}
 section.currentlyReading input[type="button"] {
   display: inline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003304}}
+div.ratingArea {
+  border: solid 2px yellow;
+  display: flex; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003310}}
 figure.rateSquare {
-  max-width: 20%;
-  text-align: center;
-  float: left;
-  margin: 5% 3%; }
-  figure.rateSquare:before, figure.rateSquare:after {
-    content: "";
-    display: table; }
-  figure.rateSquare:after {
-    clear: both; }
+  max-width: 30%;
+  border: solid 3px yellow;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003317}}
   figure.rateSquare figcaption {
     padding: 5% 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003319}}
     figure.rateSquare figcaption p {
       font-family: midnightOwl, serif;
       color: #072600;
       font-size: 2em;
       float: left;
       max-width: 5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003324}}
     figure.rateSquare figcaption input[type="submit"] {
       background: #271514;
       color: #c1beb9;
@@ -236,6 +315,7 @@ figure.rateSquare {
       cursor: pointer;
       float: left;
       margin-left: 10%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003329}}
     figure.rateSquare figcaption input.review {
       background: #271514;
       color: #c1beb9;
@@ -246,26 +326,32 @@ figure.rateSquare {
       cursor: pointer;
       max-width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003335}}
 figure.oneThird {
   width: 40%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003338}}
 article h3 {
   font-family: MidnightOwl, serif;
   font-size: 1.5em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003344}}
 input[type=range] {
   -webkit-appearance: none;
   /* Hides the slider so that custom slider can be made */
   width: 100%;
   /* Specific width is required for Firefox. */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003350}}
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003354}}
 input[type=range]:focus {
   outline: none;
   /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003358}}
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -274,6 +360,7 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003367}}
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -287,47 +374,56 @@ input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   /* Add cool effects to your sliders! */ }
 
+/* All the same stuff for Firefox */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003380}}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer; }
+
+/* All the same stuff for IE */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003391}}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003401}}
 form h3 {
   font-size: 1.5em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003408}}
 input, label {
   width: 70%;
   display: block;
   margin: .2em 0;
   color: #242020; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003414}}
 input {
   padding: 1%;
   border: none;
   background-color: #c1beb9; }
 
-.bookshelf {
-  background-image: url(../images/bookshelf.jpg) no-repeat;
-  background-position: center; }
-  .bookshelf:before, .bookshelf:after {
-    content: "";
-    display: table; }
-  .bookshelf:after {
-    clear: both; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003429}}
 footer {
-  width: 100%;
-  background: url(../images/headerBG.gif) repeat-x;
-  background-position: bottom;
-  background-size: auto;
-  color: #c1beb9; }
-  footer:before, footer:after {
-    content: "";
-    display: table; }
-  footer:after {
-    clear: both; }
-  footer .global li a, footer .social li a, footer .legal li a {
-    color: #c1beb9; }
+  background: url(../images/whiteLogo.png), url(../images/footerBG.gif);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 5% ,left;
+  background-size: 150px 104px, cover;
+  background-blend-mode: overlay;
+  color: #c1beb9;
+  padding: 5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/akr\/bookDiscovery\/css\/styles\.scss}line{font-family:\00003438}}
 small {
   display: block;
   margin: 1%;
   text-align: center;
   font-size: .75em; }
-
-/*# sourceMappingURL=styles.css.map */

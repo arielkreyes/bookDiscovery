@@ -5,7 +5,6 @@ security_check();
 include('header.php');
 ?>
     <section class="featured about">
-        <img src="images/about_featured.jpg" />
         <div class="featuredText">
         <h2>We Just Love Books.</h2><br />
         <br /><p>That you can open and smell that new book smell.</p>
