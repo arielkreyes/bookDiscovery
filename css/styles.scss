@@ -48,23 +48,19 @@ $dkgreen : rgb(7, 38, 0);
   //using javascript change the css color depending on rating
 }
 //*******************************DEFAULT STYLES******************************************
-*,
 html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-html {
+  box-sizing: border-box;
   background: url(../images/headerBG.gif)repeat-x,
   url(../images/11.jpg)no-repeat;
   background-position:  top, center;
   background-size: auto;
   background-attachment: scroll, fixed;
 }
+html > *, *:before, *:after {
+  box-sizing: inherit;
+ }
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 0 5% auto;
   p {
     font-size: 1.25vw;
   }
@@ -211,6 +207,7 @@ span {
 //FEATURED STYLES *****************************************************
 main {
   @extend .clearfix;
+  margin: 5%;
 }
 h2 {
   font-size: 2em;
@@ -302,20 +299,21 @@ section.currentlyReading input[type="button"] {
 
 //Rating Area [Grid]
 div.ratingArea {
-  border: solid 2px yellow;
   @extend .clearfix;
+  border: solid 2px yellow;
   display: flex;
+  margin: 5%;
 }
 //rateSquare --
 figure.rateSquare {
   // @extend .clearfix;
-  // justify-content: flex-start;
-  max-width: 30%;
+  justify-content: flex-start;
+  // width: 20%;
   border: solid 3px yellow;
   //recently rated on account page width...width changes on the rate page itself 1/3
   text-align: center;
   figcaption {
-    padding: 5% 0;
+    // padding: 5% 0;
     p {
       @include rated-number;
       float: left;
@@ -333,7 +331,7 @@ figure.rateSquare {
   }
 }
   figure.oneThird {
-    width: 40%;
+    width: 30%;
   }
   article h3 {
     font-family: MidnightOwl, serif;
@@ -430,7 +428,7 @@ footer {
   background:  url(../images/whiteLogo.png), url(../images/footerBG.gif);
   background-repeat: no-repeat, repeat-x;
   background-position: 5% ,left;
-  background-size: 150px 104px, cover;
+  background-size: 300px 207px, cover;
   background-blend-mode: overlay;
   color: $offwhite;
   padding: 5%;
