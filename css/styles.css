@@ -3,40 +3,31 @@
 @font-face {
   font-family: midnightOwl;
   src: url(../fonts/midnightOwlR/MidnightOwl.eot), url(../fonts/midnightOwlR/MidnightOwl.svg), url(../fonts/midnightOwlR/MidnightOwl.woff), url(../fonts/midnightOwlR/MidnightOwl.ttf); }
-/* line 23, styles.scss */
 .clearfix:after, main:after, section.default:after, div.ratingArea:after {
   content: "";
   display: table;
   clear: both; }
 
-/* line 51, styles.scss */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: url(../images/headerBG.gif) repeat-x, url(../images/11.jpg) no-repeat;
   background-position: top, center;
   background-size: auto;
   background-attachment: scroll, fixed; }
 
-/* line 59, styles.scss */
 html > *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
 
-/* line 62, styles.scss */
 body {
   font-family: 'Open Sans', sans-serif; }
-  /* line 64, styles.scss */
   body p {
     font-size: 1.25vw; }
 
-/* line 69, styles.scss */
 header {
   color: #c1beb9;
   height: 110px;
   width: 100%; }
 
-/* line 75, styles.scss */
 h1 {
   text-indent: -99em;
   background: url(../images/whiteLogosm.png) no-repeat;
@@ -44,112 +35,88 @@ h1 {
   width: 112px;
   height: 77px;
   float: left;
-  margin: 1em 0; }
+  margin: 1em; }
 
-/* line 84, styles.scss */
 h3 {
+  font-family: MidnightOwl, serif;
   font-size: 2em;
   padding: 2% 2% 2% 0; }
 
-/* line 88, styles.scss */
 h4 {
   padding: 2% 2% 2% 0; }
 
-/* line 91, styles.scss */
 ul {
   text-align: center;
   list-style: none; }
 
-/* line 95, styles.scss */
 li {
   display: inline-block; }
 
-/* line 98, styles.scss */
 a {
   text-decoration: none;
   color: #c1beb9; }
 
-/* line 103, styles.scss */
 ul.steps li {
   padding: 2%; }
 
-/* line 107, styles.scss */
 p.colone, p.coltwo {
   float: left;
   width: 45%; }
 
-/* line 112, styles.scss */
 .utility {
   width: 30%;
   float: right;
   margin: 1% 0 0 0;
   z-index: 100; }
-  /* line 117, styles.scss */
   .utility li {
     font-size: .75em;
     padding-right: 3%; }
-  /* line 121, styles.scss */
   .utility li:last-of-type {
     padding-right: 0;
     margin-right: 0; }
 
-/* line 127, styles.scss */
 .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   width: 30%;
   position: absolute;
-  top: 40px;
-  left: 675px; }
+  top: 4%;
+  left: 62%; }
 
-/* line 135, styles.scss */
 input[type=search] {
   padding: 3%;
   width: 95%; }
 
-/* line 139, styles.scss */
 .btn_search {
   border: solid 2px #c1beb9;
   color: #c1beb9;
   max-width: 30%;
-  padding: 3%; }
+  padding: 2%; }
 
-/* line 145, styles.scss */
 .btn_search:hover {
   background-color: #c1beb9;
   color: #271514; }
 
-/* line 150, styles.scss */
 .global {
   padding: 0 0 3% 0; }
-  /* line 153, styles.scss */
   .global li {
     padding-right: 10%; }
-  /* line 156, styles.scss */
   .global li:last-of-type {
     padding-right: 0; }
 
-/* line 160, styles.scss */
 header nav.global {
   width: 100%;
   position: absolute;
   top: 80px;
   left: 0; }
 
-/* line 166, styles.scss */
 .social {
   margin: 1%; }
 
-/* line 169, styles.scss */
 .legal {
   color: #c1beb9;
   font-size: .75em; }
 
-/* line 174, styles.scss */
 nav.userNav {
   width: 60px;
   height: 166px;
@@ -157,66 +124,53 @@ nav.userNav {
   float: right;
   color: #c1beb9;
   padding: 5% 0; }
-  /* line 181, styles.scss */
   nav.userNav ul {
     display: block;
     list-style-type: none; }
-  /* line 185, styles.scss */
   nav.userNav li {
     padding: 20% 0; }
-  /* line 188, styles.scss */
   nav.userNav li a {
     text-align: center; }
 
-/* line 194, styles.scss */
 input[type="button"] {
   background: #271514;
   color: #c1beb9;
   text-align: center;
   border: none;
-  padding: 4%;
   margin-right: 0;
   cursor: pointer; }
 
-/* line 197, styles.scss */
 input[type="submit"] {
   background-color: #271514;
   color: #c1beb9;
   width: 30%;
   padding: 2%; }
 
-/* line 203, styles.scss */
 span {
   font-style: italic;
   color: rgba(28, 25, 25, 0.5); }
 
-/* line 208, styles.scss */
 main {
   margin: 5%; }
 
-/* line 212, styles.scss */
 h2 {
   font-size: 2em;
   color: #1c1919;
   float: left;
   z-index: 50; }
 
-/* line 218, styles.scss */
 section.featured {
   max-width: 100%;
   height: 423px;
   position: relative;
   font-family: midnightOwl, serif; }
 
-/* line 221, styles.scss */
 section.home {
   background-image: url(../images/home_featured.jpg); }
 
-/* line 224, styles.scss */
 section.rate {
   background-image: url(../images/rate_featured.jpg); }
 
-/* line 227, styles.scss */
 .rate div.featuredText {
   position: absolute;
   top: 210px;
@@ -224,11 +178,9 @@ section.rate {
   z-index: 20;
   font-family: MidnightOwl, serif; }
 
-/* line 234, styles.scss */
 section.discover {
   background-image: url(../images/discover_featured.jpg); }
 
-/* line 237, styles.scss */
 .discover div.featuredText {
   position: absolute;
   top: 10%;
@@ -236,7 +188,6 @@ section.discover {
   z-index: 20;
   font-family: MidnightOwl, serif; }
 
-/* line 244, styles.scss */
 section.about {
   background-image: url(../images/about_featured.jpg);
   background-repeat: no-repeat;
@@ -244,121 +195,102 @@ section.about {
   background-position: right;
   overflow: hidden; }
 
-/* line 251, styles.scss */
 .about div.featuredText {
   position: absolute;
   top: 20%;
   left: 15%;
   z-index: 20; }
 
-/* line 258, styles.scss */
 .register div.featuredText {
   position: absolute;
   top: 22%;
   left: 10%;
   z-index: 20; }
-  /* line 263, styles.scss */
   .register div.featuredText h2, .register div.featuredText p {
     color: white; }
 
-/* line 267, styles.scss */
 .login div.featuredText {
   position: absolute;
   top: 10%;
   left: 0;
   z-index: 20; }
-  /* line 272, styles.scss */
   .login div.featuredText h2, .login div.featuredText p {
     display: block; }
 
-/* line 281, styles.scss */
 section.currentlyReading {
   width: 100%;
   height: 300px; }
-  /* line 284, styles.scss */
   section.currentlyReading .bookInfo {
     padding-left: 5%; }
-  /* line 287, styles.scss */
   section.currentlyReading img {
     float: left; }
-  /* line 290, styles.scss */
   section.currentlyReading figcaption {
     float: left; }
 
-/* line 295, styles.scss */
 section.currentlyReading input[type="button"] {
   display: inline; }
 
-/* line 301, styles.scss */
 div.ratingArea {
   border: solid 2px yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-width: 100%;
+  margin: 5%;
   display: flex;
-  margin: 5%; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
 
-/* line 308, styles.scss */
 figure.rateSquare {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  border: solid 3px yellow;
+  width: 30%;
+  margin: 5% 0;
   text-align: center; }
-  /* line 317, styles.scss */
-  figure.rateSquare figcaption p {
-    font-family: midnightOwl, serif;
-    color: #072600;
-    font-size: 2em;
-    float: left;
-    max-width: 5%; }
-  /* line 322, styles.scss */
-  figure.rateSquare figcaption input[type="submit"] {
-    background: #271514;
-    color: #c1beb9;
-    text-align: center;
-    border: none;
-    padding: 4%;
-    margin-right: 0;
-    cursor: pointer;
-    float: left;
-    margin-left: 10%; }
-  /* line 327, styles.scss */
-  figure.rateSquare figcaption input.review {
-    background: #271514;
-    color: #c1beb9;
-    text-align: center;
-    border: none;
-    padding: 4%;
-    margin-right: 0;
-    cursor: pointer;
-    max-width: 100%; }
+  figure.rateSquare figcaption.actionbox {
+    border: solid 1px yellow; }
+    figure.rateSquare figcaption.actionbox p {
+      font-family: midnightOwl, serif;
+      color: #072600;
+      font-size: 2em;
+      float: left;
+      max-width: 5%; }
+    figure.rateSquare figcaption.actionbox input[type="submit"] {
+      background: #271514;
+      color: #c1beb9;
+      text-align: center;
+      border: none;
+      margin-right: 0;
+      cursor: pointer;
+      float: left;
+      margin-left: 10%; }
+    figure.rateSquare figcaption.actionbox input.review {
+      background: #271514;
+      color: #c1beb9;
+      text-align: center;
+      border: none;
+      margin-right: 0;
+      cursor: pointer;
+      max-width: 100%; }
 
-/* line 333, styles.scss */
 figure.oneThird {
   width: 30%; }
 
-/* line 336, styles.scss */
+.rateSquare img.bookcover {
+  width: 52%;
+  height: 70%; }
+
 article h3 {
-  font-family: MidnightOwl, serif;
   font-size: 1.5em; }
 
-/* line 342, styles.scss */
 input[type=range] {
   -webkit-appearance: none;
   /* Hides the slider so that custom slider can be made */
   width: 100%;
   /* Specific width is required for Firefox. */ }
 
-/* line 348, styles.scss */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; }
 
-/* line 352, styles.scss */
 input[type=range]:focus {
   outline: none;
   /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
-/* line 356, styles.scss */
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -367,7 +299,6 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent; }
 
-/* line 365, styles.scss */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -378,12 +309,10 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   margin-top: -14px;
   /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-          box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   /* Add cool effects to your sliders! */ }
 
 /* All the same stuff for Firefox */
-/* line 378, styles.scss */
 input[type=range]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
@@ -392,7 +321,6 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer; }
 
 /* All the same stuff for IE */
-/* line 389, styles.scss */
 input[type=range]::-ms-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
@@ -402,24 +330,17 @@ input[type=range]::-ms-thumb {
   background: #ffffff;
   cursor: pointer; }
 
-/* line 399, styles.scss */
-form h3 {
-  font-size: 1.5em; }
-
-/* line 406, styles.scss */
 input, label {
   width: 70%;
   display: block;
   margin: .2em 0;
   color: #242020; }
 
-/* line 412, styles.scss */
 input {
   padding: 1%;
   border: none;
   background-color: #c1beb9; }
 
-/* line 427, styles.scss */
 footer {
   background: url(../images/whiteLogo.png), url(../images/footerBG.gif);
   background-repeat: no-repeat, repeat-x;
@@ -429,9 +350,10 @@ footer {
   color: #c1beb9;
   padding: 5%; }
 
-/* line 436, styles.scss */
 small {
   display: block;
   margin: 1%;
   text-align: center;
   font-size: .75em; }
+
+/*# sourceMappingURL=styles.css.map */

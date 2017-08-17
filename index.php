@@ -7,7 +7,7 @@ include('header.php');
     <section class="featured home">
     </section>
     <main>
-      <h3>Steps for a successful experience on book discovery.</h3>
+      <h3>Steps for a successful experience on book discovery!</h3>
       <ul class="steps">
         <li>Step 1: Discover a Book.</li>
         <li>Step 2: Read It.</li>
